@@ -57,6 +57,7 @@ Read below to see how you can contribute or add your profile details.
    Read more about pull requests on the [GitHub help pages](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 9. Wait until one of the maintainers merges your pull request. If there are any conflicts, you will get a notification.
+10. Ensure you rename your image to your fullname
 
 ## Anatomy of an open source project:
 
