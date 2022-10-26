@@ -44,7 +44,6 @@ body {
   min-height: 100%;
   text-rendering: optimizeSpeed;
   font-family: "Rubik", sans-serif;
-  background-color: rgb(37, 2, 54);
 }
 
 /* A elements that don't have a class get default styles */
