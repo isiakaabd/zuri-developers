@@ -1,15 +1,28 @@
 :root {
   --primary-color: #000009;
   --text-color: #fff;
-  --fs-large: 4rem;
+  --fs-large: 2rem;
   --gap: 2rem;
   --card-background: rgb(48, 48, 95);
 }
 /* 1rem ==> 10px */
 /* Ensure you are using rem instead of pixel(px) */
 h2 {
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 500;
+}
+h4 {
+  font-size: 4rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.role,
+.gender {
+  font-size: 1.2rem;
 }
 .title {
   font-size: 1.2rem;
@@ -39,63 +52,31 @@ header {
 }
 .grid-container > * {
   height: 25rem;
-  border: 0.5rem solid;
-  border-radius: 2rem;
-}
-
-.card {
-  background-color: var(--card-background);
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.full-name,
-.role,
-.gender,
-.social-media,
-.title {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  color: var(--text-color);
-}
-
-.gender,
-.role,
-.social-media {
-  font-size: 1rem;
-  font-weight: 100;
-}
-
-p a {
-  text-decoration: none;
-  color: rgb(102, 255, 0);
+  border: 0.005rem solid #f0f0f0;
+  padding: 1.2rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .profile-image {
   height: 12rem;
-  margin-left: auto;
-  margin-right: auto;
+  /* width: 12rem; */
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
+
 /* input */
 input[type="search"] {
-  border-radius: 0.8rem;
-  padding: 1.5rem;
-  height: 4.5rem;
+  padding: 2rem;
+  height: 4rem;
+  width: 30rem;
+  border-radius: 20rem;
+  border: none;
+  font-size: 1.2rem;
 }
-
-input:hover {
-  box-shadow: inset 0.1rem 0.3rem 0.1rem;
-  transition: 0.14s;
+::placeholder {
+  font-size: 1.2rem;
 }
-
-input::placeholder {
-  font-size: 2rem;
-}
-/* ::placeholder {
 
 /* media queries */
 
