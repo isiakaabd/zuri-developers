@@ -10,9 +10,6 @@ h2 {
   font-size: 2rem;
   font-weight: 500;
 }
-h4 {
-  font-size: 4rem;
-}
 
 a {
   text-decoration: none;
@@ -39,9 +36,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 3rem;
-  font-size: clamp(1.5rem, 5vw, var(--fs-large));
+  font-size: clamp(1rem, 5vw, var(--fs-large));
 }
-
+header > * {
+  flex: 1;
+}
 .grid-container {
   padding-top: 10rem;
   display: grid;
@@ -50,7 +49,7 @@ header {
   gap: var(--gap, 1rem);
 }
 .grid-container > * {
-  height: 25rem;
+  min-height: 25rem;
   border: 0.005rem solid #f0f0f0;
   padding: 1.2rem 2rem;
   border-radius: 1rem;
@@ -68,7 +67,8 @@ header {
 input[type="search"] {
   padding: 2rem;
   height: 4rem;
-  width: 30rem;
+  max-width: 30rem;
+  width: 100%;
   border-radius: 20rem;
   border: none;
   font-size: 1.2rem;
