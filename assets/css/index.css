@@ -5,7 +5,14 @@
   --gap: 2rem;
 }
 /* 1rem ==> 10px */
-
+h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
 header {
   height: 8rem;
   position: fixed;
@@ -16,7 +23,6 @@ header {
   display: flex;
   align-items: center;
   padding: 2rem 3rem;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: clamp(1.5rem, 5vw, var(--fs-large));
@@ -31,14 +37,24 @@ header {
 }
 .grid-container > * {
   height: 25rem;
-  overflow: scroll;
+  /* overflow: scroll; */
   border: 1rem solid;
 }
 
 .profile-image {
   height: 12rem;
 }
-
+/* input */
+input[type=search] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px; 
+  padding: 12px 20px 12px 5px;
+}
 /* media queries */
 
 @media screen and (min-width: 33em) {
