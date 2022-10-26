@@ -5,6 +5,7 @@
   --gap: 2rem;
 }
 /* 1rem ==> 10px */
+/* Ensure you are using rem instead of pixel(px) */
 h2 {
   font-size: 1.7rem;
   font-weight: 700;
@@ -22,9 +23,9 @@ header {
   color: var(--text-color);
   display: flex;
   align-items: center;
-  padding: 2rem 3rem;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem 3rem;
   font-size: clamp(1.5rem, 5vw, var(--fs-large));
 }
 
@@ -37,7 +38,6 @@ header {
 }
 .grid-container > * {
   height: 25rem;
-  /* overflow: scroll; */
   border: 1rem solid;
 }
 
@@ -45,16 +45,13 @@ header {
   height: 12rem;
 }
 /* input */
-input[type=search] {
-  width: 100%;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-position: 10px 10px; 
-  padding: 12px 20px 12px 5px;
+input[type="search"] {
+  border-radius: 0.4rem;
+  padding: 1.5rem;
+  height: 4.5rem;
 }
+/* ::placeholder {
+
 /* media queries */
 
 @media screen and (min-width: 33em) {
