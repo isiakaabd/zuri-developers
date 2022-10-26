@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #000009;
+  --text-color: #fff;
+  --fs-large: 4rem;
+  --gap: 2rem;
+}
+/* 1rem ==> 10px */
+
+header {
+  height: 8rem;
+  position: fixed;
+  background-color: var(--primary-color, #000);
+  left: 0;
+  right: 0;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  padding: 2rem 3rem;
+  font-size: clamp(1.5rem, 5vw, var(--fs-large));
+}
+
+.grid-container {
+  padding-top: 10rem;
+  display: grid;
+  padding-inline: 2rem;
+  grid-auto-columns: 1fr;
+  gap: var(--gap, 1rem);
+}
+.grid-container > * {
+  height: 25rem;
+  overflow: scroll;
+  border: 1rem solid;
+}
+
+.profile-image {
+  height: 12rem;
+}
+
+/* media queries */
+
+@media screen and (min-width: 33em) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 38em) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 54em) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
