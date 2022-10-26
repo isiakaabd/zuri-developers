@@ -3,11 +3,13 @@
   --text-color: #fff;
   --fs-large: 2rem;
   --gap: 2rem;
+  --card-background: rgb(48, 48, 95);
+  --link-color: rgb(137, 160, 9);
 }
 /* 1rem ==> 10px */
 /* Ensure you are using rem instead of pixel(px) */
 h2 {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 h4 {
@@ -17,14 +19,15 @@ h4 {
 a {
   text-decoration: none;
   font-size: 0.8rem;
+  color: var(--link-color);
 }
 
 .role,
 .gender {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 header {
@@ -57,11 +60,41 @@ header {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
+.card {
+  border: 0.4rem solid var(--primary-color);
+  background-color: var(--card-background);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
 .profile-image {
   height: 12rem;
   /* width: 12rem; */
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.full-name,
+.role,
+.gender,
+.title,
+.social-media {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  color: var(--text-color);
+}
+
+.full-name {
+  font-size: 2rem;
+}
+
+.social-media {
+  font-size: 1rem;
 }
 
 /* input */
