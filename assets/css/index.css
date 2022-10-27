@@ -50,7 +50,7 @@ header > * {
   padding-inline: 2rem;
   grid-auto-columns: 1fr;
   gap: var(--gap, 1rem);
-  font-family: 'Baloo Paaji 2', cursive;
+  font-family: "Baloo Paaji 2", cursive;
 }
 
 .card {
@@ -153,36 +153,35 @@ header > * {
 }
 
 .role {
-    position: absolute;
-    bottom: -0.6rem;
-    right: -0.6rem;
-    padding: 0.3rem 1rem;
-    background: var(--card-bg);
-    border-radius: 0.8rem;
-    font-size: 1.4rem;
+  position: absolute;
+  bottom: -0.6rem;
+  right: -0.6rem;
+  padding: 0.3rem 1rem;
+  background: var(--card-bg);
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
 }
 
 .gender {
   font-weight: 600;
 }
 
-
 .aspect-ratio {
   aspect-ratio: 1/1;
 }
 
-@supports not (aspect-ratio: 1/1){
-	/* 	CSS workaround for browsers like some Safari not supporting aspect-ratio */
-	.aspect-ratio::before{
-		content: "";
-		padding-top: 100%;
-	}
-	
-	.aspect-ratio::after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+@supports not (aspect-ratio: 1/1) {
+  /* 	CSS workaround for browsers like some Safari not supporting aspect-ratio */
+  .aspect-ratio::before {
+    content: "";
+    padding-top: 100%;
+  }
+
+  .aspect-ratio::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 /* input */
