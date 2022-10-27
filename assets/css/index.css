@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
+
 :root {
   --primary-color: #000009;
   --text-color: #fff;
   --fs-large: 2rem;
   --gap: 2rem;
+  --card-bg: #222831;
+  --litebl: rgb(32, 98, 226);
+  --darkbl: rgb(32, 42, 132);
 }
 /* 1rem ==> 10px */
 /* Ensure you are using rem instead of pixel(px) */
@@ -27,6 +32,7 @@ a {
 header {
   height: 8rem;
   position: fixed;
+  z-index: 1;
   background-color: var(--primary-color, #000);
   left: 0;
   right: 0;
@@ -47,20 +53,139 @@ header > * {
   padding-inline: 2rem;
   grid-auto-columns: 1fr;
   gap: var(--gap, 1rem);
-}
-.grid-container > * {
-  min-height: 25rem;
-  border: 0.005rem solid #f0f0f0;
-  padding: 1.2rem 2rem;
-  border-radius: 1rem;
-  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Baloo Paaji 2', cursive;
 }
 
-.profile-image {
-  height: 12rem;
-  /* width: 12rem; */
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+.card-designx {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+  color: var(--text-color);
+}
+
+.card-designx:hover {
+  cursor: pointer;
+  background-color: #020018;
+}
+
+.profile-imagex {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  border: 5px solid #272133;
+  margin-top: 20px;
+  box-shadow: 0 10px 50px rgba(32, 98, 226, 1);
+}
+
+.card-namex {
+  margin: 12px 0;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.card-imagex {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-iconsx {
+  padding: 0;
+  list-style: none;
+  margin: 1em 1em 0;
+}
+
+.social-iconsx li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+}
+
+.social-iconsx i {
+  color: var(--text-color);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transition: all 265ms ease-out;
+  font-size: 16px;
+}
+
+.social-iconsx a {
+  display: inline-block;
+}
+
+.social-iconsx a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: block;
+  background: linear-gradient(45deg, var(--litebl), var(--darkbl));
+  transition: all 265ms ease-out;
+}
+
+.social-iconsx a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+
+.social-iconsx a:hover i {
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  color: var(--litebl);
+  background: -webkit-linear-gradient(45deg, var(--litebl), var(--darkbl));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+.role-containerx {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+}
+
+.role-child-postx {
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+    padding: 3px 10px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.role-child-genderx{
+  font-weight: 600;
+}
+
+
+.aspect-ratio {
+  aspect-ratio: 1/1;
+}
+
+@supports not (aspect-ratio: 1/1){
+	/* 	CSS workaround for browsers like some Safari not supporting aspect-ratio */
+	.aspect-ratio::before{
+		content: "";
+		padding-top: 100%;
+	}
+	
+	.aspect-ratio::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 /* input */
@@ -79,25 +204,19 @@ input[type="search"] {
 
 /* media queries */
 
-@media screen and (min-width: 33em) {
+@media screen and (min-width: 600px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (min-width: 38em) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 54em) {
+@media screen and (min-width: 865px) {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (min-width: 75em) {
+@media screen and (min-width: 1200px) {
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
   }
