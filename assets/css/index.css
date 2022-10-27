@@ -1,79 +1,97 @@
 :root {
-  --primary-color: #000009;
-  --text-color: #fff;
-  --fs-large: 4rem;
-  --gap: 2rem;
+    --primary-color: #000009;
+    --text-color: #fff;
+    --fs-large: 4rem;
+    --gap: 2rem;
 }
+
+
 /* 1rem ==> 10px */
+
+
 /* Ensure you are using rem instead of pixel(px) */
+
 h2 {
-  font-size: 1.7rem;
-  font-weight: 700;
+    font-size: 1.7rem;
+    font-weight: 700;
 }
-.title {
-  font-size: 1.2rem;
-  font-weight: 500;
+
+n .title {
+    font-size: 1.2rem;
+    font-weight: 500;
 }
+
 header {
-  height: 8rem;
-  position: fixed;
-  background-color: var(--primary-color, #000);
-  left: 0;
-  right: 0;
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 3rem;
-  font-size: clamp(1.5rem, 5vw, var(--fs-large));
+    height: 8rem;
+    position: fixed;
+    background-color: var(--primary-color, #000);
+    left: 0;
+    right: 0;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    font-size: clamp(1.5rem, 5vw, var(--fs-large));
 }
 
 .grid-container {
-  padding-top: 10rem;
-  display: grid;
-  padding-inline: 2rem;
-  grid-auto-columns: 1fr;
-  gap: var(--gap, 1rem);
+    padding-top: 10rem;
+    display: grid;
+    padding-inline: 2rem;
+    grid-auto-columns: 1fr;
+    gap: var(--gap, 1rem);
+    font-size: 15px;
+    text-align: center;
+    box-shadow: -20px 30px 25px rgb(0, 0, 0.3);
 }
-.grid-container > * {
-  height: 25rem;
-  border: 1rem solid;
+
+.grid-container>* {
+    height: 25rem;
+    border: 1rem solid;
+    border-radius: 10px;
 }
 
 .profile-image {
-  height: 12rem;
+    height: 12rem;
+    margin-left: 9rem;
 }
+
+
 /* input */
+
 input[type="search"] {
-  border-radius: 0.4rem;
-  padding: 1.5rem;
-  height: 4.5rem;
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+    height: 4.5rem;
 }
+
+
 /* ::placeholder {
 
 /* media queries */
 
 @media screen and (min-width: 33em) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (min-width: 38em) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (min-width: 54em) {
-  .grid-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (min-width: 75em) {
-  .grid-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
