@@ -1,5 +1,7 @@
 # Zuri-Developers-2022
 
+[Open the preview in browser](https://htmlpreview.github.io/?https://github.com/isiakaabd/zuri-developers/blob/main/index.html)
+
 Read below to see how you can contribute or add your profile details.
 
 ## A Guide to Get Started
@@ -100,3 +102,5 @@ Finally, open source projects use the following tools to organize discussion. Re
 **Pull requests**: Where people discuss and review changes that are in progress.
 
 **Discussion forums or mailing lists**: Some projects may use these channels for conversational topics (for example, “How do I…“ or “What do you think about…“ instead of bug reports or feature requests). Others use the issue tracker for all conversations.
+
+I have added my profile to the project.
