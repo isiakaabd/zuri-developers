@@ -1,5 +1,7 @@
 # Zuri-Developers-2022
 
+[Open the preview in browser](https://htmlpreview.github.io/?https://github.com/isiakaabd/zuri-developers/blob/main/index.html)
+
 Read below to see how you can contribute or add your profile details.
 
 ## A Guide to Get Started
