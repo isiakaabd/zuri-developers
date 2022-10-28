@@ -8,14 +8,12 @@ searchBox.addEventListener("keyup", ({ target: { value } }) => {
     gridContainer.innerHTML = null;
     gridContainer.append(...cardsStore);
   }
-  filteredCards = cards.filter((card) => {
-    const valid = card
+  filteredCards = cards.filter((card) =>
+    card
       .querySelector(".full-name")
       .innerText.toLocaleLowerCase()
-      .includes(value.toLocaleLowerCase());
-    console.log(valid);
-    return valid;
-  });
+      .includes(value.toLocaleLowerCase())
+  );
   gridContainer.innerHTML = null;
   if (filteredCards.length > 0) {
     gridContainer.append(...filteredCards);
