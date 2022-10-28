@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap"); */
-
 :root {
   --primary-color: #000009;
   --text-color: #fff;
@@ -50,7 +48,6 @@ header > * {
   padding-inline: 2rem;
   grid-auto-columns: 1fr;
   gap: 3rem var(--gap, 1rem);
-  /* font-family: "Baloo Paaji 2", cursive; */
 }
 
 .card {
