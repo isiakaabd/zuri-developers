@@ -129,7 +129,7 @@ header > * {
   -webkit-transform: scale(1.2);
   color: var(--litebl);
   background: -webkit-linear-gradient(45deg, var(--litebl), var(--darkbl));
-  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.25s ease-in;
 }
