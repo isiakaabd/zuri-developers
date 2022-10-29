@@ -19,6 +19,11 @@ a {
   font-size: 0.8rem;
 }
 
+.role,
+.gender {
+  font-size: 1.2rem;
+}
+
 .title {
   font-size: 1.2rem;
   font-weight: 500;
@@ -64,6 +69,22 @@ header > * {
 .card:hover {
   cursor: pointer;
   background-color: #020018;
+}
+
+.card {
+  background-color: rgb(119, 119, 119);
+}
+
+.profile-image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .profile-image {
