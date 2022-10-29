@@ -56,7 +56,7 @@ header > * {
 }
 
 .card {
-  background-color: var(--card-bg);
+  background-color: #020018;
   padding: 3rem;
   border-radius: 2rem;
   display: flex;
@@ -69,10 +69,6 @@ header > * {
 .card:hover {
   cursor: pointer;
   background-color: #020018;
-}
-
-.card {
-  background-color: rgb(119, 119, 119);
 }
 
 .profile-image {
