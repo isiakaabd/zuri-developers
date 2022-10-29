@@ -9,3 +9,4 @@ Rijayatu Razak
 Afolabi Abdullahi Olayinka
 THE DETECTIVE OF TECH
 JOKER4MAS
+Segun Okedele
