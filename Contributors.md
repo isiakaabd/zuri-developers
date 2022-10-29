@@ -17,3 +17,4 @@
     - Ayo Mark
     - Charles Obimnaeto Egesionu
     - Omojole Aishat Eniola
+    - Segun Okedele
