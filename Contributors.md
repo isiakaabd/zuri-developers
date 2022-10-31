@@ -20,3 +20,4 @@
   - Charles Obimnaeto Egesionu
   - Ogunleye Odunayo
   - Omojole Aishat Eniola
+  - Segun Okedele
