@@ -20,3 +20,4 @@
   - Charles Obimnaeto Egesionu
   - Omojole Aishat Eniola
   - Segun Okedele
+  - Kingsley Matthew
