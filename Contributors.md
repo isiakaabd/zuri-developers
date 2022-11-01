@@ -22,3 +22,4 @@
   - ADEWOPO Glory Samson
   - Segun Okedele
   - Oluwatuyi Abiola
+  - Doyin Oyadiji
