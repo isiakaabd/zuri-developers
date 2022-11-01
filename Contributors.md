@@ -19,3 +19,6 @@
   - Ayo Mark
   - Charles Obimnaeto Egesionu
   - Omojole Aishat Eniola
+  - ADEWOPO Glory Samson
+  - Segun Okedele
+  - Oluwatuyi Abiola
