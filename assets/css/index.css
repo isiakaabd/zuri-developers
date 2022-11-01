@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --primary-color: #000009;
   --text-color: #fff;
@@ -6,9 +7,16 @@
   --card-bg: #222831;
   --litebl: rgb(32, 98, 226);
   --darkbl: rgb(32, 42, 132);
+  --body-bg: linear-gradient(180deg, #430f22 0%, #200422 100%);
 }
 /* 1rem ==> 10px */
 /* Ensure you are using rem instead of pixel(px) */
+
+body {
+  font-family: Poppins, sans-serif;
+  background: var(--body-bg) no-repeat;
+}
+
 h2 {
   font-size: 2rem;
   font-weight: 500;
@@ -29,19 +37,20 @@ a {
   font-weight: 500;
 }
 header {
-  height: 8rem;
-  position: fixed;
+  position: sticky;
   z-index: 1;
-  background-color: var(--primary-color, #000);
   left: 0;
-  right: 0;
+  top: 0;
   color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 2rem 3rem;
+  padding: 2rem 5rem;
   font-size: clamp(1rem, 5vw, var(--fs-large));
+
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
 }
 header > * {
   flex: 1;
@@ -199,17 +208,39 @@ header > * {
 }
 
 /* input */
-input[type="search"] {
-  padding: 2rem;
-  height: 4rem;
-  max-width: 30rem;
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 10px;
+  gap: 10px;
+
   width: 100%;
-  border-radius: 20rem;
+  max-width: 300px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 34px;
+}
+
+.search-bar svg {
+  flex-grow: 1;
+}
+
+.search-bar input {
+  width: 100%;
   border: none;
   font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
 }
-::placeholder {
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar input::placeholder {
   font-size: 1.2rem;
+  color: inherit;
+  opacity: 0.8;
 }
 
 /* media queries */
