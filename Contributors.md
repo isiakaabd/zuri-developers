@@ -24,3 +24,4 @@
   - Oluwatuyi Abiola
   - Doyin Oyadiji
   - Chiamaka Miriam
+  - Aguguo Prince Chigozie
