@@ -21,14 +21,10 @@
   - Omojole Aishat Eniola
   - ADEWOPO Glory Samson
   - Segun Okedele
-<<<<<<< HEAD
-  -Olateju Ibukunoluwa
-
-=======
   - Oluwatuyi Abiola
   - Doyin Oyadiji
   - Chiamaka Miriam
   - Aguguo Prince Chigozie
   - Godstime Nwabue
   - Omosaye Moses Iseoluwa
->>>>>>> 3430c8e1e825143c3637c230164a551f63fa9b7a
+  -Olateju Ibukunoluwa
