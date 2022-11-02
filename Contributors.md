@@ -23,3 +23,4 @@
   - Segun Okedele
   - Oluwatuyi Abiola
   - Doyin Oyadiji
+  - Chiamaka Miriam
