@@ -27,6 +27,18 @@ a {
   font-size: 0.8rem;
 }
 
+main {
+  /* overflow hidden so the balls at the background dont overflow the screen and cause side scrolling */
+  overflow-x: hidden;
+}
+
+/* this causes the contents inside not to get too wide */
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
 .role,
 .gender {
   font-size: 1.2rem;
@@ -36,53 +48,127 @@ a {
   font-size: 1.2rem;
   font-weight: 500;
 }
+
 header {
+  /* position sticky so that it takes its position just as relative and also scrolls along with the screen */
   position: sticky;
   z-index: 1;
   left: 0;
   top: 0;
   color: var(--text-color);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.06);
+  /* makes content underneath it blurry */
+  backdrop-filter: blur(10px);
+}
+
+header .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
   padding: 2rem 5rem;
   font-size: clamp(1rem, 5vw, var(--fs-large));
-
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.06);
-  backdrop-filter: blur(10px);
 }
+
 header > * {
   flex: 1;
 }
+
 .grid-container {
-  padding-top: 10rem;
-  padding-bottom: 2rem;
+  position: relative;
+  padding-block: 5rem;
+  /* 15px at the top, because of the image transition effect on card over, */
+  padding-top: 15rem;
   display: grid;
-  padding-inline: 2rem;
+  padding-inline: 5rem;
   grid-auto-columns: 1fr;
-  gap: 3rem var(--gap, 1rem);
+  /* repeat(auto-fill, minmax(270px, 1fr)) means that grid should fill the entire row with as much
+  cards as it can as long as the width is not less than 270px
+  autofill the grid should not expand a card even if theres an empty space beside it e.g a row 
+  that has 2 cards when the others have 3
+  */
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  row-gap: 100px;
+  column-gap: 50px;
 }
 
 .card {
-  background-color: #020018;
-  padding: 3rem;
-  border-radius: 2rem;
+  position: relative;
+  /* 10px at the top, because of the image transition effect on card over, 3rem left and right and 5 rem at the bottom */
+  padding: 10rem 3rem 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0.5rem 1rem var(--primary-color);
   color: var(--text-color);
-}
-
-.card:hover {
+  /* this linear gradient gives the card a glass effect */
+  background: linear-gradient(
+    155.88deg,
+    rgba(255, 255, 255, 0.2) -14.4%,
+    rgba(217, 217, 217, 0) 99.94%
+  );
+  box-shadow: 0px 25px 24px rgba(0, 0, 0, 0.15);
+  /* this makes content underneath the card blury i.e the background balls */
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  /* isolation isolate creates a new stacking contect insde of it, 
+  so zindex doesnt go outside of it, you can check MDN docs for 
+  more details or conect with me */
+  isolation: isolate;
+  /* the borders make the glass look thick */
+  border-top: 1px solid #ffffff80;
+  border-left: 1px solid #ffffff80;
+  text-align: center;
   cursor: pointer;
-  background-color: #020018;
 }
 
-.profile-image {
-  margin-left: auto;
-  margin-right: auto;
+.card .shimmer {
+  position: absolute;
+  /* inset means the offset value of this element from its positioned parent 
+  in shot, it means top 0, left 0, right 0, bottom 0
+  */
+  inset: 0;
+  /* overflow hidden so the actuall shimmer which is the before psuedo-element 
+  does not over show outside of the card during its animation effect */
+  overflow: hidden;
+}
+
+.card .shimmer::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 600px;
+  height: 100%;
+  transform: skew(45deg) translate(600px);
+  background-image: linear-gradient(90deg, transparent 25%, #ffffff50 50%, transparent 75%);
+  content: "";
+  transition: transform 500ms ease-out;
+}
+
+.card:hover .shimmer::before {
+  transform: skew(45deg) translate(-600px);
+}
+
+.balls {
+  position: absolute;
+  inset: 0;
+}
+
+.ball {
+  background: linear-gradient(
+    135.24deg,
+    #dd3d3d 6.78%,
+    #7b0b11 33.79%,
+    #1e0204 60.8%,
+    #000000 87.8%
+  );
+  mix-blend-mode: screen;
+  position: absolute;
+  width: 295px;
+  height: 295px;
+  border-radius: 50%;
+  z-index: -2;
 }
 
 .container {
@@ -93,20 +179,69 @@ header > * {
 }
 
 .profile-image {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  justify-content: center;
+  position: absolute;
+  /* nice trick to center stuff in css */
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  transition: top 400ms ease-out;
   display: flex;
-  border: 0.5rem solid #272133;
-  margin-top: 2rem;
-  box-shadow: 0 1rem 5rem var(--litebl);
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 1.625rem;
+}
+
+.card:hover .profile-image {
+  gap: 1.7rem;
+}
+
+.profile-image img {
+  border: 20px solid transparent;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  scale: 1;
+  transition: backdrop-filter 400ms ease-out, border-color 400ms ease-out, scale 400ms ease-out;
+}
+
+/* media query for devices that dont support touch eg touchescreens ike mobile devices and tabs, i want the hovered
+  state to be applied by default to the cards
+*/
+@media (hover: none) {
+  .card .profile-image {
+    top: 0;
+  }
+  .card .profile-image img {
+    scale: 1.2;
+    backdrop-filter: blur(30px);
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+}
+
+.card:hover .profile-image {
+  top: 0;
+}
+.card:hover .profile-image img {
+  scale: 1.2;
+  backdrop-filter: blur(30px);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .full-name {
   margin: 1.2rem 0;
-  font-size: 2.1rem;
-  font-weight: 600;
+  font-size: 3.2rem;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  text-align: center;
+}
+
+.postx,
+.gender {
+  font-weight: 400;
+  font-size: 1.4rem;
 }
 
 .card-image {
@@ -119,54 +254,26 @@ header > * {
   padding: 0;
   list-style: none;
   margin: 1em 1em 0;
-}
-
-.social-icons li {
-  display: inline-block;
-  margin: 0.15em;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 9px;
 }
 
 .social-icons i {
   color: var(--text-color);
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
   transition: all 265ms ease-out;
-  font-size: 1.6rem;
+  font-size: 2.4rem;
 }
 
 .social-icons a {
-  display: inline-block;
-}
-
-.social-icons a:before {
-  transform: scale(1);
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
-  content: " ";
-  width: 2.5rem;
-  height: 2.5rem;
+  display: inline-grid;
+  place-items: center;
   border-radius: 50%;
-  display: block;
-  background: linear-gradient(45deg, var(--litebl), var(--darkbl));
-  transition: all 265ms ease-out;
-}
-
-.social-icons a:hover:before {
-  transform: scale(0);
-  transition: all 0.25s ease-in;
-}
-
-.social-icons a:hover i {
-  transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  color: var(--litebl);
-  background: -webkit-linear-gradient(45deg, var(--litebl), var(--darkbl));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.25s ease-in;
+  width: 4.4rem;
+  height: 4.4rem;
+  background-color: rgba(255, 255, 255, 0.17);
 }
 
 .container {
@@ -176,13 +283,10 @@ header > * {
 }
 
 .role {
-  position: absolute;
-  bottom: -0.6rem;
-  right: -0.6rem;
   padding: 0.3rem 1rem;
-  background: var(--card-bg);
   border-radius: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  color: white;
 }
 
 .gender {
@@ -191,6 +295,42 @@ header > * {
 
 .aspect-ratio {
   aspect-ratio: 1/1;
+}
+
+/* media query is for devices that do support hover eg devices that use cursors, like Laptops and Desktops */
+@media not (hover: none) {
+  /* adding starting point transition to all the elements in the card */
+  .card .full-name,
+  .card .container .postx,
+  .card .container .gender,
+  .card .social-icons {
+    translate: 0% 30px;
+    opacity: 0;
+    transition: translate ease-out 500ms, opacity ease-out 500ms;
+  }
+}
+
+/* adding ending point transition for when the card is hovered on */
+.card:hover .full-name,
+.card:hover .container .postx,
+.card:hover .container .gender,
+.card:hover .social-icons {
+  translate: 0% 0px;
+  opacity: 1;
+}
+
+/* setting incremental transition delay so as to create a staggered effect */
+.card:hover .full-name {
+  transition-delay: 200ms;
+}
+.card:hover .container .postx {
+  transition-delay: 400ms;
+}
+.card:hover .container .gender {
+  transition-delay: 600ms;
+}
+.card:hover .social-icons {
+  transition-delay: 800ms;
 }
 
 @supports not (aspect-ratio: 1/1) {
@@ -245,7 +385,7 @@ header > * {
 
 /* media queries */
 
-@media screen and (min-width: 38.72rem) {
+/* @media screen and (min-width: 38.72rem) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -261,4 +401,4 @@ header > * {
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
   }
-}
+} */
