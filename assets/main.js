@@ -27,6 +27,11 @@ cards.forEach((card) => {
   // i just wanted to remove the hyphen before the gender
   card.querySelector(".container").removeChild(card.querySelector(".postx").nextSibling);
 
+  const links = card.querySelectorAll("a");
+
+  links.forEach((link) => {
+    link.setAttribute("target", "_blank");
+  });
 
   // adds the shimmer element to the card
   const shimmer = document.createElement("span");
