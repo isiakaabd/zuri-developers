@@ -382,23 +382,3 @@ header > * {
   color: inherit;
   opacity: 0.8;
 }
-
-/* media queries */
-
-/* @media screen and (min-width: 38.72rem) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 56.72rem) {
-  .grid-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (min-width: 75rem) {
-  .grid-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-} */
