@@ -23,6 +23,17 @@ searchBox.addEventListener("keyup", ({ target: { value } }) => {
   }
 });
 
+cards.forEach((card) => {
+  // i just wanted to remove the hyphen before the gender
+  card.querySelector(".container").removeChild(card.querySelector(".postx").nextSibling);
+
+
+  // adds the shimmer element to the card
+  const shimmer = document.createElement("span");
+  shimmer.className = "shimmer";
+  card.prepend(shimmer);
+});
+
 // generates an array with 10 elements, the elements are used to create the balls
 // and randomly disperses them in the main element
 // although this is not perfect as balls can overlap each other
