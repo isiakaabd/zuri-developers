@@ -27,11 +27,6 @@ a {
   font-size: 0.8rem;
 }
 
-main {
-  /* overflow hidden so the balls at the background dont overflow the screen and cause side scrolling */
-  overflow-x: hidden;
-}
-
 /* this causes the contents inside not to get too wide */
 .row {
   width: 100%;
@@ -131,6 +126,7 @@ header > * {
   inset: 0;
   /* overflow hidden so the actuall shimmer which is the before psuedo-element 
   does not over show outside of the card during its animation effect */
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -153,6 +149,7 @@ header > * {
 .balls {
   position: absolute;
   inset: 0;
+  pointer-events: none;
 }
 
 .ball {

@@ -45,8 +45,9 @@ cards.forEach((card) => {
 Array.from(Array(10).keys()).map(() => {
   const ball = document.createElement("span");
   ball.className = "ball";
-  ball.style.top = Math.floor(Math.random() * document.body.scrollHeight) + "px";
-  ball.style.left = Math.floor(Math.random() * document.body.scrollWidth) + "px";
+  ball.style.top = Math.floor(Math.random() * 100) + "%";
+  ball.style.left = Math.floor(Math.random() * 100) + "%";
+  ball.style.transform = "translate(-100%, -100%)";
 
   balls.append(ball);
 });
