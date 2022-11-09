@@ -84,15 +84,15 @@ header > * {
   autofill the grid should not expand a card even if theres an empty space beside it e.g a row 
   that has 2 cards when the others have 3
   */
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  row-gap: 100px;
-  column-gap: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  row-gap: 150px;
+  column-gap: 20px;
 }
 
 .card {
   position: relative;
   /* 10px at the top, because of the image transition effect on card over, 3rem left and right and 5 rem at the bottom */
-  padding: 10rem 3rem 5rem;
+  padding: 10rem 2rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,7 +115,6 @@ header > * {
   border-top: 1px solid #ffffff80;
   border-left: 1px solid #ffffff80;
   text-align: center;
-  cursor: pointer;
 }
 
 .card .shimmer {
