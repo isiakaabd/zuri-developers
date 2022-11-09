@@ -19,3 +19,12 @@
   - Ayo Mark
   - Charles Obimnaeto Egesionu
   - Omojole Aishat Eniola
+  - ADEWOPO Glory Samson
+  - Segun Okedele
+  - Oluwatuyi Abiola
+  - Doyin Oyadiji
+  - Chiamaka Miriam
+  - Aguguo Prince Chigozie
+  - Godstime Nwabue
+  - Omosaye Moses Iseoluwa
+  - Olateju Ibukunoluwa
