@@ -31,5 +31,5 @@
   - Tega Lucky-Fiakpa
   - BABATUNDE Naheemot Atinuke
   - Iniobong Effiong
-  -Kingsley Matthew
+  - Kingsley Matthew
   - OYEBOLADE OLADOKUN
