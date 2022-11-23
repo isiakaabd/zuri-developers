@@ -6,6 +6,7 @@
   - AFEES ODUOLA
   - RUSSELL OJEGUN
   - AMENE TERH
+  - EBOWEME AYO
   - EZE OGBONNA CHRISTOPHER
   - Rijayatu Razak
   - Afolabi Abdullahi Olayinka
