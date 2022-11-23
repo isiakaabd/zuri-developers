@@ -6,6 +6,7 @@
   - AFEES ODUOLA
   - RUSSELL OJEGUN
   - AMENE TERH
+  - EBOWEME AYO
   - EZE OGBONNA CHRISTOPHER
   - Rijayatu Razak
   - Afolabi Abdullahi Olayinka
@@ -32,5 +33,5 @@
   - BABATUNDE Naheemot Atinuke
   - Iniobong Effiong
   - Kingsley Matthew
- -  Siyanbola Ajibola Kolade
-  - Aigbiluese Ehidiamhen
+  - Siyanbola Ajibola Kolade
+  - OYEBOLADE OLADOKUN
