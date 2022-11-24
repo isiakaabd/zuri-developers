@@ -32,7 +32,7 @@
   - Tega Lucky-Fiakpa
   - BABATUNDE Naheemot Atinuke
   - Iniobong Effiong
-    -Kingsley Matthew
- -  Siyanbola Ajibola Kolade
+  - Kingsley Matthew
+  - Siyanbola Ajibola Kolade
   - OYEBOLADE OLADOKUN
   - LAWAL TOHEEB BAYONLE
