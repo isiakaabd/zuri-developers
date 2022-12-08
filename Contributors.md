@@ -37,4 +37,5 @@
   - OYEBOLADE OLADOKUN
   - LAWAL TOHEEB BAYONLE
   - Ogunleye Odunayo
+  - Solomon Nweke U
 
